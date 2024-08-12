@@ -257,7 +257,7 @@ const TodoComponent = () => {
 
     const fetchTodo = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/get_data?page=${page}&limit=1`);
+            const response = await fetch(`https://flashcards-id03.onrender.com/get_data?page=${page}&limit=1`);
             const data = await response.json();
             if (data.todos.length > 0) {
                 setTodo(data.todos[0]);

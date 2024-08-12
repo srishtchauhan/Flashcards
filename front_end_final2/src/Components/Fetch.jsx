@@ -7,7 +7,7 @@ function Fetch() {
 
   async function abc() {
     try {
-      const resp = await fetch('http://localhost:5000/getData');
+      const resp = await fetch('https://flashcards-id03.onrender.com/getData');
       const myData = await resp.json();
       console.log('Fetched todos:', myData); // Debug log
       setTodo(myData);

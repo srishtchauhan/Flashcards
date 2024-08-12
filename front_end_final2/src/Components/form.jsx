@@ -18,7 +18,7 @@ function Form({ refreshTodos }) {
   async function senddata(event) {
     event.preventDefault();
     try {
-      await axios.post('http://localhost:5000/create', {
+      await axios.post('https://flashcards-id03.onrender.com/create', {
         title: data.title,
         description: data.description,
       });

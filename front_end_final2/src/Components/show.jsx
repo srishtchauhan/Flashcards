@@ -292,7 +292,7 @@ function Show({ title, description, keyVal, refreshTodos }) {
 
   async function handleEdit() {
     try {
-      await axios.put(`http://localhost:5000/editData/${keyVal}`, {
+      await axios.put(`https://flashcards-id03.onrender.com/editData/${keyVal}`, {
         title: data.title,
         description: data.description,
       });
@@ -305,7 +305,7 @@ function Show({ title, description, keyVal, refreshTodos }) {
 
   async function handleDelete() {
     try {
-      await axios.delete(`http://localhost:5000/deleteData/${keyVal}`);
+      await axios.delete(`https://flashcards-id03.onrender.com/deleteData/${keyVal}`);
       refreshTodos(); // Refresh the list after deleting
     } catch (error) {
       console.error('Error deleting todo:', error);
