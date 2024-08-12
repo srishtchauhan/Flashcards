@@ -9,7 +9,7 @@ function Fetch() {
     try {
       const resp = await fetch('https://flashcards-id03.onrender.com/getData');
       const myData = await resp.json();
-      console.log('Fetched todos:', myData); // Debug log
+      console.log('Fetched todos:', myData); 
       setTodo(myData);
     } catch (error) {
       console.error('Error fetching todos:', error);
@@ -24,9 +24,9 @@ function Fetch() {
     <Show
       title={data.title}
       description={data.description}
-      key={data.id} // Ensure key is unique and consistent
-      keyVal={data.id} // Use the actual id from the fetched data
-      refreshTodos={abc} // Refresh the list after delete or edit
+      key={data.id} 
+      keyVal={data.id} 
+      refreshTodos={abc} 
     />
   ));
 
